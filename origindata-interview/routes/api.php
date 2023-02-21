@@ -21,8 +21,8 @@ Route::get('/test', function () {
 });
 
 //* Company GET routes:
-Route::get('/companies', 'App\Http\Controllers\CompanyController@index');
-Route::get('/companies/{id}', 'App\Http\Controllers\CompanyController@show');
+Route::get('/company', 'App\Http\Controllers\CompanyController@index');
+Route::get('/company/{id}', 'App\Http\Controllers\CompanyController@show');
 
 //* Employee GET routes:
 Route::get('/employee', 'App\Http\Controllers\EmployeeController@index');
@@ -38,11 +38,11 @@ Route::middleware('auth:api')->group(function () {
     //* Authentication only: Create, Update and Delet
 
     // Company Model
-    Route::post('/companies', 'App\Http\Controllers\CompanyController@store');
+    Route::post('/company', 'App\Http\Controllers\CompanyController@store');
     // PUT:
-    Route::put('/companies/{id}', 'App\Http\Controllers\CompanyController@update');
+    Route::put('/company/{id}', 'App\Http\Controllers\CompanyController@update');
     // DELETE:
-    Route::delete('/companies/{id}', 'App\Http\Controllers\CompanyController@destroy');
+    Route::delete('/company/{id}', 'App\Http\Controllers\CompanyController@destroy');
 
     // Employee Model
     Route::post('/employee', 'App\Http\Controllers\EmployeeController@store');
