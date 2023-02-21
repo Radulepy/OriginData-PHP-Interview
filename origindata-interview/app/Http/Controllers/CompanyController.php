@@ -40,7 +40,9 @@ class CompanyController extends Controller
         $company = new Company();
         $company->name = $validatedData['name'];
         $company->description = $validatedData['description'];
+        $company->created_at = $validatedData['created_at'];
         $company->founded_at = $validatedData['founded_at'];
+        $company->updated_at = $validatedData['updated_at'];
         $company->save();
 
         return response()->json(['message' => 'Company created successfully', 'company' => $company], 201);
